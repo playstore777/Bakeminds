@@ -1,5 +1,3 @@
-// http://api.icndb.com/jokes/random/3
-
 document.querySelector('.get-jokes').addEventListener('click', jokesGenerator);
 
 function jokesGenerator(e) {
