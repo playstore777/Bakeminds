@@ -1,11 +1,15 @@
 let maxDiff = arr => {
-    let max = Math.max(...arr);
+    let maxArr = [];
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] < max) {
-            document.write(max - arr[i]);
-            return max - arr[i];
-        }
+      for (let j = i+1; j < arr.length; j++) {
+        maxArr.push(arr[j] - arr[i]);
+      }
     }
-}
-
-maxDiff([2, 3, 10, 6, 4, 8, 1]);
+    //console.log(Math.abs(Math.max(...maxArr)));
+    return Math.max(...maxArr);
+  }
+  
+  
+  maxDiff([2, 1, 3, 10, 6, 4, 8, 1]);
+    
+  

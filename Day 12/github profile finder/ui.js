@@ -57,6 +57,7 @@ class UI {
     }
 
     showAlert(message, className) {
+        console.log('message : ', message);
         const div = document.createElement('div');
         div.className = className;
         div.appendChild(document.createTextNode(message));

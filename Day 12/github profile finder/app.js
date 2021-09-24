@@ -8,6 +8,7 @@ searchUserInput.addEventListener('keyup', (e) => {
     if (inputText !== ""){
         // github.getUser(inputText).then(data => console.log('data', data));
         github.getUser(inputText).then(data => {
+            console.log('data message : ', data);
             if (data.profile.message === 'Not Found') {
                 ui.showAlert('User not found', 'alert alert-danger');
             }else{
