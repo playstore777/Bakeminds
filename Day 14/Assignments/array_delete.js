@@ -1,10 +1,6 @@
 Array.prototype.delete = function (value) {
-  for (let ele of this) {
-    if (ele === value) {
-      let index = this.indexOf(value);
-      this.splice(index, 1);
-    }
-  }
+  let index = this.indexOf(value);
+  this.splice(index, 1);
   return this;
 };
 
