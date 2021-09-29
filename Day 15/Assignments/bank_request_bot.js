@@ -2,37 +2,49 @@ const bankRequest = (balance, requests) => {
   let index = 1;
   for (let request of requests) {
     let queryList = request.split(" ");
+
     let type = queryList[0];
-    let acc = Number(queryList[1]) - 1;
-    let amount = Number(queryList[2]);
     let operation = bankOperationSelector(type);
 
     if (queryList.length <= 3) {
+      let acc = Number(queryList[1]) - 1;
+      let amount = Number(queryList[2]);
       //   console.log(queryList);
+
+      //checking for invalid account
       if (!accCheck(acc, balance)) {
         return [-index];
       }
+
       balance = operation(balance, acc, amount);
     } else {
       let accFrom = Number(queryList[1]) - 1;
       let accTo = Number(queryList[2]) - 1;
+
+      //checking for invalid from account
       if (!accCheck(accFrom, balance)) {
         return [-index];
       }
+      //checking for invalid To account
       if (!accCheck(accTo, balance)) {
         return [-index];
       }
-      amount = Number(queryList[3]);
+
+      let amount = Number(queryList[3]);
       balance = operation(balance, accFrom, accTo, amount);
     }
+
+    // if operation fails, then we return the position from which it failed.
     if (balance === "invalid") {
       return [-index];
     }
+
     index++;
   }
   return balance;
 };
 
+// checks for the valid account and returns true, else false;
 const accCheck = (acc, balance) => {
   if (acc >= balance.length) return false;
   return true;
@@ -41,6 +53,8 @@ const accCheck = (acc, balance) => {
 const withdraw = (balance, acc, amt) => {
   //   console.log("withdraw : ", balance);
   balance[acc] -= amt;
+
+  // when value of any account goes to negative numbers, then we consider it as invalid transaction.
   if (balance[acc] < 0) {
     return "invalid";
   }

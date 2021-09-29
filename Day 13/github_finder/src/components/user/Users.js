@@ -12,7 +12,7 @@ const Users = (props) => {
   let usersList = [];
   if (props.data.items) {
     usersList = props.data.items.map((user) => {
-      console.log("user : ", user);
+      // console.log("user : ", user);
       return <UserItem key={user.id} data={user} />;
     });
   }
