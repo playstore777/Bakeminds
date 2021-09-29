@@ -1,0 +1,8 @@
+Implement the missing code, denoted by ellipses. You may not modify the pre-existing code.
+You are given a HTML template that renders a list of books. 
+Each book has a Delete button that should remove the element from the list, 
+and also there is an Add Book button that should insert a new book at the end of the list.
+
+The template already contains code that renders books, 
+your task is to implement the functionality for Delete and Add Book buttons. You should only modify the portion of the code in the JavaScript tab that is marked by ....
+
