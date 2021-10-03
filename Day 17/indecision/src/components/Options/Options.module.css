@@ -1,0 +1,16 @@
+.Options {
+    background-color: #464b5e;
+    /* padding: 1%; */
+    color: #a3a7c8;
+}
+
+.OptionsHeader {
+    background-color: #343846;
+    color: #a4aed4;
+    display: flex;
+    padding: 1%;
+}
+
+.OptionsHeader:hover {
+    cursor: pointer;
+}

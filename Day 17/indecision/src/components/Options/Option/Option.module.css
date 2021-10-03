@@ -1,0 +1,17 @@
+.Option {
+    background-color: #3e4054;
+    color: #dcdeec;
+    display: flex;
+}
+
+.OptionText {
+    color: #eeffff;
+}
+
+.OptionButton {
+    color: #9caed8;
+}
+
+.OptionButton:hover {
+    cursor: pointer;
+}

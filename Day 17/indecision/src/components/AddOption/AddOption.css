@@ -1,0 +1,26 @@
+.AddOption {
+    background-color: #464b5e;
+    padding: 1%;
+}
+
+.AddOption input {
+    background-color: #323646;
+    padding: 1%;
+    margin-right: 1%;
+    color: #b3a8bf;
+    border: #272a39;
+}
+
+.AddOptionButton {
+    background-color: #774bc3;
+    color: #fff1ff;
+    padding: 1%;
+    border: none;
+}
+
+.AddOptionError {
+    color: #a5afd7;
+    font-style: italic;
+    margin: 16px 0 0;
+    padding: 0 16px;
+}
