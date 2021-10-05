@@ -1,19 +1,51 @@
+// let BST = {
+//     value: 8,
+//     left: {
+//         value: 3,
+//         left: {
+//             value: 1,
+//             left: null,
+//             right: null,
+//         },
+//         right: {
+//             value: 6,
+//             left: {
+//                 value: 4,
+//                 left: null,
+//                 right: null,
+//             },
+//             right: {
+//                 value: 7,
+//                 left: null,
+//                 right: null,
+//             },
+//         },
+//     },
+//     right: {
+//         value: 10,
+//         left: null,
+//         right: {
+//             value: 14,
+//             left: {
+//                 value: 13,
+//                 left: null,
+//                 right: null,
+//             },
+//             right: null,
+//         },
+//     },
+// };
+
+// 1 2 7 11 15 29 35 40
+
 let BST = {
-    value: 8,
+    value: 11,
     left: {
-        value: 3,
-        left: {
-            value: 1,
-            left: null,
-            right: null,
-        },
+        value: 1,
+        left: null,
         right: {
-            value: 6,
-            left: {
-                value: 4,
-                left: null,
-                right: null,
-            },
+            value: 2,
+            left: null,
             right: {
                 value: 7,
                 left: null,
@@ -22,16 +54,20 @@ let BST = {
         },
     },
     right: {
-        value: 10,
+        value: 15,
         left: null,
         right: {
-            value: 14,
-            left: {
-                value: 13,
+            value: 29,
+            left: null,
+            right: {
+                value: 35,
                 left: null,
-                right: null,
+                right: {
+                    value: 40,
+                    left: null,
+                    right: null,
+                },
             },
-            right: null,
         },
     },
 };
