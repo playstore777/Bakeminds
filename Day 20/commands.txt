@@ -1,0 +1,15 @@
+commands
+
+How to use VIM:-
+    1) press 'i', it will lets us write the commit message, and then press 'escape', then type ':wq', finally press enter, it will take the message and close then editor.
+    wq stands for write and quit.
+
+ni inspirational_quotes.txt // if touch ... doesn't work!
+
+git revert -n {first 7 chars of commit hash or commit message} (here -n tells the git to not commit manually, we will do it on our, own, it just have to put them to staging area.)
+
+HEAD is the node which points to the latest commit we did.
+
+if we want to revert the latest commit, then simply we can do:
+    git revert HEAD -m {message} or git revert -n HEAD -m {message} (this stops from auto-commit, just puts them to staging area.)
+
